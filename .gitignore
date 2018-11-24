@@ -1,0 +1,6 @@
+/.cabal-sandbox
+/cabal.sandbox.config
+/dist
+/ip-neighbor-notifications.cabal
+/.sources
+/.stack-work
