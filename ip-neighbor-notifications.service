@@ -1,0 +1,25 @@
+[Unit]
+Description=IP neighbor notification service
+After=network.target
+
+ConditionFileIsExecutable=/usr/local/bin/ip-neighbor-notifications
+ConditionPathExists=/etc/default/ip-neighbor-notifications
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=30
+
+EnvironmentFile=/etc/default/ip-neighbor-notifications
+ExecStart=/usr/local/bin/ip-neighbor-notifications
+
+User=nobody
+Group=nogroup
+
+# Just in case
+CPUQuota=20%
+MemoryMax=100M
+MemorySwapMax=0
+
+[Install]
+WantedBy=multi-user.target

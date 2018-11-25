@@ -1,22 +1,30 @@
 name: ip-neighbor-notifications
-version: '0.1.0.0'
-synopsis: View AMQP messages.
-description: Please see README.md
+version: '0.0.0.1'
+synopsis: Notifies (via AMQP) of ip neighbor changes
+description: Notifies (via AMQP) of ip neighbor changes
 category: System
 license: BSD3
-homepage: http://github.com/name/project
+homepage: http://github.com/andreyk0/ip-neighbor-notifications
+
 ghc-options:
-- -threaded
-- -Wall
-- -O2
+  - -threaded
+  - -Wall
+  - -O2
+
 dependencies:
-- base
-- amqp
-- bytestring
-- optparse-applicative
-- text
-- utf8-string
+  - aeson
+  - amqp
+  - base
+  - bytestring
+  - conduit
+  - conduit-extra
+  - containers
+  - optparse-applicative
+  - shell-conduit
+  - text
+  - utf8-string
+
 executables:
-  amqp-tail:
+  ip-neighbor-notifications:
     main: Main.hs
     source-dirs: src

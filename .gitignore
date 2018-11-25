@@ -4,3 +4,4 @@
 /ip-neighbor-notifications.cabal
 /.sources
 /.stack-work
+/target
