@@ -73,7 +73,7 @@ appExchangeName = "amq.topic"
 
 -- | Publishes all messages with this routing key
 appRoutingKey :: Text
-appRoutingKey = "ip-neighbor"
+appRoutingKey = "network.ip.neighbor"
 
 
 data IPNeighboor = IPNeighboor
